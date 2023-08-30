@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import './Form.css'
 
 
 const Form = ({cityName, setCityName, setWeather, setError}) => {
@@ -23,9 +24,9 @@ const Form = ({cityName, setCityName, setWeather, setError}) => {
     }
 
     return (
-        <form onSubmit={getWeatherData}>
-            <input type="text" placeholder="Введите город" value={cityName} onChange={inputHandler} />
-            <button type='submit'>Найти</button>
+        <form onSubmit={getWeatherData} className='form'>
+            <input type="text" placeholder="Введите город" value={cityName} onChange={inputHandler} className='form__input'/>
+            <button type='submit' className='form__btn'>Найти</button>
         </form>
     )
 }
